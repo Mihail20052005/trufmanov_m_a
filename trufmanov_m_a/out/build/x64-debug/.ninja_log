@@ -1,14 +1,5 @@
 # ninja log v5
-19	3419	7001384866387666	prj.lab/CMakeFiles/rational.dir/rational.cpp.obj	332ac90812d1e1ac
-4875	13330	7001384952476787	C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/bin.dbg/rational_test.exe	2c252f6f214b0acb
-3421	3581	7001384868114926	prj.lab/rational.lib	6da48d0dc604f94c
-64	4874	7001384880969724	prj.test/CMakeFiles/rational_test.dir/rational_test.cpp.obj	ab3bab1d6d097f51
-20	459	7001430007111743	prj.test/CMakeFiles/arrayd_test.dir/arrayd_test.cpp.obj	b76b937333fefebc
-18	172	7001430826876912	prj.test/CMakeFiles/arrayd_test.dir/arrayd_test.cpp.obj	b76b937333fefebc
-22	184	7001431655958424	prj.test/CMakeFiles/arrayd_test.dir/arrayd_test.cpp.obj	b76b937333fefebc
-6	680	7001431660973150	prj.lab/CMakeFiles/arrayd.dir/arrayd.cpp.obj	db57112104eb72e0
-680	788	7001431662071193	prj.lab/arrayd.lib	68a6bd941a0f52ca
-6	614	7001432350590937	prj.lab/CMakeFiles/arrayd.dir/arrayd.cpp.obj	db57112104eb72e0
-615	709	7001432351477970	prj.lab/arrayd.lib	68a6bd941a0f52ca
-7	1337	7001442254177289	prj.lab/CMakeFiles/arrayd.dir/arrayd.cpp.obj	db57112104eb72e0
-1339	1455	7001442255437072	prj.lab/arrayd.lib	68a6bd941a0f52ca
+5	727	7005030810781444	prj.lab/rational/CMakeFiles/rational.dir/rational.cpp.obj	178d12b349ff5ebe
+729	787	7005030811370657	prj.lab/rational/rational.lib	7d187668db6bb5d1
+13	1561	7005030818971819	prj.test/CMakeFiles/rational_test.dir/rational_test.cpp.obj	83f7c90f51456795
+1561	2304	7005030822922927	C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/bin.dbg/rational_test.exe	bd028ec45202329

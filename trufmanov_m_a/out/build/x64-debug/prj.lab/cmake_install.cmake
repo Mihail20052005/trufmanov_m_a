@@ -32,11 +32,13 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/out/build/x64-debug/prj.lab/rational.lib")
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/out/build/x64-debug/prj.lab/rational/cmake_install.cmake")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/out/build/x64-debug/prj.lab/arrayd.lib")
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/out/build/x64-debug/prj.lab/arrayd/cmake_install.cmake")
 endif()
 
