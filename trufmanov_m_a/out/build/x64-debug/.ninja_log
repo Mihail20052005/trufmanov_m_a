@@ -1,5 +1,15 @@
 # ninja log v5
-5	727	7005030810781444	prj.lab/rational/CMakeFiles/rational.dir/rational.cpp.obj	178d12b349ff5ebe
-729	787	7005030811370657	prj.lab/rational/rational.lib	7d187668db6bb5d1
-13	1561	7005030818971819	prj.test/CMakeFiles/rational_test.dir/rational_test.cpp.obj	83f7c90f51456795
 1561	2304	7005030822922927	C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/bin.dbg/rational_test.exe	bd028ec45202329
+5	727	7005030810781444	prj.lab/rational/CMakeFiles/rational.dir/rational.cpp.obj	178d12b349ff5ebe
+1008	1164	7012769114315393	prj.lab/arrayd/arrayd.lib	6a37dbea9ae956f8
+729	787	7005030811370657	prj.lab/rational/rational.lib	7d187668db6bb5d1
+35	849	7012769111144167	prj.test/CMakeFiles/arrayd_test.dir/arrayd_test.cpp.obj	2de1166cd3c22310
+13	408	7012771175459916	prj.lab/matrixs/CMakeFiles/matrixs.dir/matrixs.cpp.obj	a9230498c2d41fbb
+13	1561	7005030818971819	prj.test/CMakeFiles/rational_test.dir/rational_test.cpp.obj	83f7c90f51456795
+410	579	7012771177126364	prj.lab/matrixs/matrixs.lib	a10577d8793f297c
+16	1008	7012769112729149	prj.lab/arrayd/CMakeFiles/arrayd.dir/arrayd.cpp.obj	11c09498c659ce51
+28	3040	7012771201792345	prj.test/CMakeFiles/matrixs_test.dir/matrixs_test.cpp.obj	e69cbf4fdc2cdb9c
+3040	4472	7012771208918261	C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/bin.dbg/matrixs_test.exe	73d4d166a92a51b2
+8	487	7012772516003555	prj.test/CMakeFiles/arrayd_test.dir/arrayd_test.cpp.obj	2de1166cd3c22310
+12	150	7012772618723373	prj.test/CMakeFiles/arrayd_test.dir/arrayd_test.cpp.obj	2de1166cd3c22310
+14	169	7012772772061753	prj.test/CMakeFiles/arrayd_test.dir/arrayd_test.cpp.obj	2de1166cd3c22310

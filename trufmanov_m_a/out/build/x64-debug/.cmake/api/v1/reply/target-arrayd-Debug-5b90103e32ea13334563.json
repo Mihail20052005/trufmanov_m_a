@@ -151,7 +151,7 @@
 		},
 		{
 			"backtrace" : 2,
-			"path" : "prj.lab/arrayd/include/ArrayD/arrayd.hpp",
+			"path" : "prj.lab/arrayd/include/arrayd/arrayd.hpp",
 			"sourceGroupIndex" : 1
 		}
 	],

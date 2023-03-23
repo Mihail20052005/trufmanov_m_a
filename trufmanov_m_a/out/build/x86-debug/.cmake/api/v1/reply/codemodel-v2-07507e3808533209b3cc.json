@@ -9,7 +9,7 @@
 					"childIndexes" : 
 					[
 						1,
-						4
+						5
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
@@ -25,7 +25,8 @@
 					"childIndexes" : 
 					[
 						2,
-						3
+						3,
+						4
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-prj.lab-Debug-02d5af99ecd44d686785.json",
@@ -40,7 +41,7 @@
 				{
 					"build" : "prj.lab/rational",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-prj.lab.rational-Debug-f31be889838ebfe626c7.json",
+					"jsonFile" : "directory-prj.lab.rational-Debug-8db2a5a387396fd766a5.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.18"
@@ -50,7 +51,7 @@
 					"source" : "prj.lab/rational",
 					"targetIndexes" : 
 					[
-						2
+						4
 					]
 				},
 				{
@@ -70,6 +71,22 @@
 					]
 				},
 				{
+					"build" : "prj.lab/matrixs",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-prj.lab.matrixs-Debug-e6f6e4026fce83930708.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "prj.lab/matrixs",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
 					"build" : "prj.test",
 					"jsonFile" : "directory-prj.test-Debug-8d06470f3d57bfdcb843.json",
 					"minimumCMakeVersion" : 
@@ -82,7 +99,8 @@
 					"targetIndexes" : 
 					[
 						1,
-						3
+						3,
+						5
 					]
 				}
 			],
@@ -96,7 +114,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5
 					],
 					"name" : "cpp2023_test",
 					"targetIndexes" : 
@@ -104,7 +123,9 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4,
+						5
 					]
 				}
 			],
@@ -113,28 +134,42 @@
 				{
 					"directoryIndex" : 3,
 					"id" : "arrayd::@813ce7461222d12939a6",
-					"jsonFile" : "target-arrayd-Debug-394162ada1e851964c0f.json",
+					"jsonFile" : "target-arrayd-Debug-96d36ce31b8d12899f3c.json",
 					"name" : "arrayd",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 4,
+					"directoryIndex" : 5,
 					"id" : "arrayd_test::@03e42033715ba8c02d37",
-					"jsonFile" : "target-arrayd_test-Debug-66a6162fd9625350a40c.json",
+					"jsonFile" : "target-arrayd_test-Debug-5ef95e49120817ae3bdb.json",
 					"name" : "arrayd_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "matrixs::@88fe394e92c01205ab8f",
+					"jsonFile" : "target-matrixs-Debug-0739942ce85a4d21e158.json",
+					"name" : "matrixs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "matrixs_test::@03e42033715ba8c02d37",
+					"jsonFile" : "target-matrixs_test-Debug-eec8f3c61555d556127b.json",
+					"name" : "matrixs_test",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "rational::@fd4f4962d1a8e6d13fee",
-					"jsonFile" : "target-rational-Debug-b8607bb8e054a8964c95.json",
+					"jsonFile" : "target-rational-Debug-fb67b08906455e607e12.json",
 					"name" : "rational",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 4,
+					"directoryIndex" : 5,
 					"id" : "rational_test::@03e42033715ba8c02d37",
-					"jsonFile" : "target-rational_test-Debug-1490f4c9992e265daf55.json",
+					"jsonFile" : "target-rational_test-Debug-d9d3707c53ca6262fbf9.json",
 					"name" : "rational_test",
 					"projectIndex" : 0
 				}
@@ -144,7 +179,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/out/build/x64-debug",
+		"build" : "C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/out/build/x86-debug",
 		"source" : "C:/Misha/Projects/oop_semestr_2/trufmanov_m_a"
 	},
 	"version" : 

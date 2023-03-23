@@ -1,2 +1,3 @@
 add_subdirectory(rational)
-add_subdirectory(ArrayD)
+add_subdirectory(arrayd)
+add_subdirectory(matrixs)

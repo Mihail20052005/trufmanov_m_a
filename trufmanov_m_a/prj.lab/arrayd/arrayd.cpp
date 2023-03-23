@@ -13,6 +13,8 @@ ArrayD::ArrayD(const std::ptrdiff_t size)
     data_ = new double[ssize_];
 }
 
+
+
 void ArrayD::resize(const std::ptrdiff_t new_size) {
     if (new_size < 0) {
         throw std::invalid_argument("new_size must be positive");

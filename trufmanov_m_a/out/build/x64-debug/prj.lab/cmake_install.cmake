@@ -42,3 +42,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/out/build/x64-debug/prj.lab/arrayd/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/out/build/x64-debug/prj.lab/matrixs/cmake_install.cmake")
+endif()
+

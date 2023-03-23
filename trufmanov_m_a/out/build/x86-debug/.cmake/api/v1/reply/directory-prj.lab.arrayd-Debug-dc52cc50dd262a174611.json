@@ -7,7 +7,7 @@
 		],
 		"files" : 
 		[
-			"prj.lab/rational/CMakeLists.txt"
+			"prj.lab/arrayd/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -30,16 +30,16 @@
 			"destination" : "lib",
 			"paths" : 
 			[
-				"prj.lab/rational/rational.lib"
+				"prj.lab/arrayd/arrayd.lib"
 			],
-			"targetId" : "rational::@fd4f4962d1a8e6d13fee",
-			"targetIndex" : 2,
+			"targetId" : "arrayd::@813ce7461222d12939a6",
+			"targetIndex" : 0,
 			"type" : "target"
 		}
 	],
 	"paths" : 
 	{
-		"build" : "prj.lab/rational",
-		"source" : "prj.lab/rational"
+		"build" : "prj.lab/arrayd",
+		"source" : "prj.lab/arrayd"
 	}
 }
