@@ -1,11 +1,12 @@
-#define DOCTEST_IMPLEMENTS_WITH_MAIN
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
+#include "arrayd/arrayd.hpp"
 
 TEST_CASE("first test"){
-	SUBCASE("first test"){
-		CHECK(1 == 1);
-	
-	}
+    auto Arr = ArrayD();
+    SUBCASE("default") {
+        CHECK(Arr.ssize() == 0);
+    }
 
 
 }

@@ -116,35 +116,31 @@ std::istream& operator>>(std::istream& istrm,
     return rhs.readFrom(istrm);
 }
 
-Rational& operator+(Rational& rhs) {
-    return rhs;
-}
-Rational& operator-(Rational& rhs) {
-    Rational tmp;
-    tmp -= rhs;
-    return tmp;
-}
-
-Rational operator+(Rational lhs, const Rational& rhs) { // these use assignment analogs
-    lhs += rhs;
-    return lhs;
+Rational operator+(Rational lhs, const Rational& rhs) {
+    Rational a = lhs;
+    a += rhs;
+    return a;
 }
 Rational operator-(Rational lhs, const Rational& rhs) {
+    Rational a = lhs;
     lhs -= rhs;
-    return lhs;
+    return a;
 }
 Rational operator*(Rational lhs, const Rational& rhs) {
+    Rational a = lhs;
     lhs *= rhs;
-    return lhs;
+    return a;
 }
 Rational operator/(Rational lhs, const Rational& rhs) {
+    Rational a = lhs;
     lhs /= rhs;
-    return lhs;
+    return a;
 }
 Rational operator%(Rational lhs, const Rational& rhs)
 {
-    lhs %= rhs;
-    return lhs;
+    Rational a = lhs;
+    lhs /= rhs;
+    return a;
 }
 
 Rational sqr(Rational myRat) {

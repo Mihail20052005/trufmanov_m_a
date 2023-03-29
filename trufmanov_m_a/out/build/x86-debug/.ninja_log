@@ -1,4 +1,5 @@
 # ninja log v5
-21	171	7012776558389484	prj.test/CMakeFiles/arrayd_test.dir/arrayd_test.cpp.obj	482f8ab918d2c45b
+15	3021	7017739757206625	prj.test/CMakeFiles/arrayd_test.dir/arrayd_test.cpp.obj	482f8ab918d2c45b
 5	669	7012776563352021	prj.lab/arrayd/CMakeFiles/arrayd.dir/arrayd.cpp.obj	763ff9195e66d65d
 670	836	7012776565003734	prj.lab/arrayd/arrayd.lib	1b431ecb1629ffa0
+3023	4096	7017739760434569	C:/Misha/Projects/oop_semestr_2/trufmanov_m_a/bin.dbg/arrayd_test.exe	97e8c8e9f3b805ff
