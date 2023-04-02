@@ -3,17 +3,12 @@
 #include <stdexcept>
 #include <cstring>
 
-ArrayD::~ArrayD() {
-    delete[] data_;
-}
 
 ArrayD::ArrayD(const std::ptrdiff_t size)
     : ssize_(size)
 {
     data_ = new double[ssize_];
 }
-
-
 
 void ArrayD::resize(const std::ptrdiff_t new_size) {
     if (new_size < 0) {

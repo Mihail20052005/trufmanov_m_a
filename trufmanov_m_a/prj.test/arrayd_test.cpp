@@ -2,11 +2,9 @@
 #include <doctest/doctest.h>
 #include "arrayd/arrayd.hpp"
 
-TEST_CASE("first test"){
-    auto Arr = ArrayD();
+TEST_CASE("resize") {
+    auto arr = ArrayD();
     SUBCASE("default") {
-        CHECK(Arr.ssize() == 0);
+        CHECK(arr.ssize() == 0);
     }
-
-
 }
