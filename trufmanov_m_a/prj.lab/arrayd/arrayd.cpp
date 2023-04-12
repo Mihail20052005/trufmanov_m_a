@@ -7,10 +7,33 @@
 ArrayD::ArrayD(const std::ptrdiff_t size)
     : ssize_(size)
 {
+    caparcity = size * 2;
     data_ = new double[ssize_];
 }
 
+ArrayD::~ArrayD(){
+    delete data_;
+}
+
+
+void ArrayD::insert(std::ptrdiff_t index, const double value){
+    if(!notError){
+        throw std::invalid_argument("index out of range");
+    }else{
+        resize(ssize_ + 1);
+        ssize_++;
+
+        for (int i = ssize_; i > index; i--) {
+            data_[i] = data_[i - 1];
+        }
+        data_[index] = value;
+    }
+}
+
+
 void ArrayD::resize(const std::ptrdiff_t new_size) {
+
+    
     if (new_size < 0) {
         throw std::invalid_argument("new_size must be positive");
     }
@@ -28,6 +51,7 @@ void ArrayD::resize(const std::ptrdiff_t new_size) {
         data_ = new_data;
         ssize_ = new_size;
     }
+    caparcity = new_size * 2;
 }
 
 double& ArrayD::operator[](const std::ptrdiff_t indx) {
@@ -52,4 +76,8 @@ ArrayD& ArrayD::operator=(const ArrayD& rhs) {
 
 std::ptrdiff_t ArrayD::ssize() const noexcept {
     return ssize_;
+}
+
+bool notError(std::ptrdiff_t index, std::ptrdiff_t ssize) {
+    return(index < 0 || index >= ssize ? false : true);
 }

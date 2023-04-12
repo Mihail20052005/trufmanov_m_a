@@ -167,6 +167,13 @@ Rational pow(Rational myRat, int32_t power) {
     return answer;
 }
 
+Rational operator+(Rational rhs, const int a){
+    Rational b(a);
+    Rational c = rhs;
+    c += b;
+    return c;
+}
+
 bool operator==(Rational lhs, const Rational& rhs) {
     lhs -= rhs;
     return lhs.isZero();
@@ -217,28 +224,34 @@ std::ostream& Rational::writeTo(std::ostream& ostrm) const noexcept {
     return ostrm;
 }
 
-std::istream& Rational::readFrom(std::istream& istrm) { //создаем временные переменные separator_, num_, denum_
+std::istream& Rational::readFrom(std::istream& istrm) {
     char separator_(0);
     int32_t num_(0);
     int32_t denum_(0);
+    char eof(0);
     istrm >> num_ >> std::noskipws >> separator_ >> std::skipws >> std::noskipws >> denum_;
     if(denum_ < 0){
         istrm.setstate(std::ios_base::failbit);
     
     }
-    //istrm - ссылка на поток чтения, поскольку потоки не копируются
     if (istrm.good() || istrm.eof() && !istrm.fail()) {
         if (int(separator_) == 47 ) {
-            istrm.clear();
+            //istrm.clear();
             *this = Rational(num_, denum_);
-            if (denom < 0) {
-                denom *= -1;
-                num *= -1;
+
+            if (istrm.rdstate() != 0) {
+                istrm.setstate(std::ios_base::eofbit);
+            }
+
+            if(eof == 0){
+                istrm.setstate(std::ios_base::eofbit);
             }
         }
-        //else {
-          //  istrm.setstate(std::ios_base::failbit);
-        //}
+
+        
+        else {
+            istrm.setstate(std::ios_base::failbit);
+        }
 
         return istrm;
     }

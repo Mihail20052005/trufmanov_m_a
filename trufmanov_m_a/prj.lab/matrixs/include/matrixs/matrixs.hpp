@@ -21,3 +21,5 @@ private:
 	int col = 0;
 	int row = 0;
 };
+
+bool outOfRangeCheck(int index_row, int index_col, int row, int col);

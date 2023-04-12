@@ -21,6 +21,23 @@ MatrixS& MatrixS::operator=(const MatrixS& other) {
 		data[i] = other.at(i / col, i % col);
 	}
 }
+const int& MatrixS::at(int index_row, int index_col) const{
+	if (!outOfRangeCheck) {
+		throw std::invalid_argument("Index out of range");
+	}
+	else {
+		return data[col * index_col + index_row];
+	}
+}
+
+int& MatrixS::at(int index_row, int index_col) {
+	if (!outOfRangeCheck) {
+		throw std::invalid_argument("Index out of range");
+	}
+	else {
+		return data[col * index_col + index_row];
+	}
+}
 
 const int MatrixS::cols() const{
 	return col;
@@ -28,4 +45,15 @@ const int MatrixS::cols() const{
 
 const int MatrixS::rows() const{
 	return row;
+}
+
+bool outOfRangeCheck(int index_row, int index_col, int row, int col) {
+	if (index_row * index_col <= 0 || index_row > row 
+		|| index_col > col || index_col < 0) {
+		return false;
+	
+	}
+	return true;
+
+
 }
