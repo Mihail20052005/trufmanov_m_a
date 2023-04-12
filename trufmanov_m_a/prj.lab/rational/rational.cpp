@@ -174,6 +174,44 @@ Rational operator+(Rational rhs, const int a){
     return c;
 }
 
+Rational operator+(const int a, Rational rhs) {
+    Rational b(a);
+    Rational c = rhs;
+    c += b;
+    return c;
+}
+
+Rational operator-(Rational rhs, const int a) {
+    Rational b(a);
+    Rational c = rhs;
+    c -= b;
+    return c;
+}
+
+Rational operator-(const int a, Rational rhs) {
+    Rational b(a);
+    Rational c = rhs;
+    c -= b;
+    return c;
+}
+
+Rational operator*(const int a, Rational rhs) {
+    Rational b(a);
+    Rational c = rhs;
+    c *= b;
+    return c;
+}
+
+Rational operator*(Rational rhs, const int a) {
+    Rational b(a);
+    Rational c = rhs;
+    c *= b;
+    return c;
+}
+
+
+
+
 bool operator==(Rational lhs, const Rational& rhs) {
     lhs -= rhs;
     return lhs.isZero();
@@ -235,20 +273,11 @@ std::istream& Rational::readFrom(std::istream& istrm) {
     
     }
     if (istrm.good() || istrm.eof() && !istrm.fail()) {
-        if (int(separator_) == 47 ) {
+        if (int(separator_) == 47) {
             //istrm.clear();
             *this = Rational(num_, denum_);
 
-            if (istrm.rdstate() != 0) {
-                istrm.setstate(std::ios_base::eofbit);
-            }
-
-            if(eof == 0){
-                istrm.setstate(std::ios_base::eofbit);
-            }
         }
-
-        
         else {
             istrm.setstate(std::ios_base::failbit);
         }

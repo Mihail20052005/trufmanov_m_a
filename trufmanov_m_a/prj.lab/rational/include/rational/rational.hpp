@@ -53,6 +53,13 @@ Rational operator+(Rational lhs, const Rational& rhs);
 Rational operator-(Rational lhs, const Rational& rhs);
 Rational operator*(Rational lhs, const Rational& rhs);
 Rational operator/(Rational lhs, const Rational& rhs);
+Rational operator+(Rational lhs, const int a);
+Rational operator+(const int a, Rational rhs);
+Rational operator-(Rational lhs, const int a);
+Rational operator-(const int a, Rational rhs);
+Rational operator*(Rational lhs, const int a);
+Rational operator*(const int a, Rational rhs);
+
 Rational sqr(Rational myRat);
 Rational pow(Rational myRat, const int32_t power);
 
