@@ -49,16 +49,19 @@ std::istream& operator>>(std::istream& istrm, Rational& rhs);
 
 Rational operator-(Rational rhs);
 
-Rational operator+(Rational lhs, const Rational& rhs);
-Rational operator-(Rational lhs, const Rational& rhs);
-Rational operator*(Rational lhs, const Rational& rhs);
-Rational operator/(Rational lhs, const Rational& rhs);
-Rational operator+(Rational lhs, const int a);
-Rational operator+(const int a, Rational rhs);
-Rational operator-(Rational lhs, const int a);
-Rational operator-(const int a, Rational rhs);
-Rational operator*(Rational lhs, const int a);
-Rational operator*(const int a, Rational rhs);
+Rational operator+(const Rational lhs, const Rational& rhs);
+Rational operator+(const Rational& lhs, const int32_t& rhs);
+Rational operator+(const int32_t& lhs, const Rational& rhs);
+Rational operator-(const Rational lhs, const Rational& rhs);
+Rational operator-(const Rational& lhs, const int32_t& rhs);
+Rational operator-(const int32_t& lhs, const Rational& rhs);
+Rational operator*(const Rational& lhs, const int32_t& rhs);
+Rational operator*(const Rational lhs, const Rational& rhs);
+Rational operator*(const int32_t& lhs, const Rational& rhs);
+Rational operator/(const Rational& lhs, const int32_t& rhs);
+Rational operator/(const Rational lhs, const Rational& rhs);
+Rational operator/(const int32_t& lhs, const Rational& rhs);
+//Rational operator-(const Rational& lhs);
 
 Rational sqr(Rational myRat);
 Rational pow(Rational myRat, const int32_t power);

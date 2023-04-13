@@ -167,46 +167,60 @@ Rational pow(Rational myRat, int32_t power) {
     return answer;
 }
 
-Rational operator+(Rational rhs, const int a){
+Rational operator+(const Rational& rhs, const int& a){
     Rational b(a);
     Rational c = rhs;
     c += b;
     return c;
 }
 
-Rational operator+(const int a, Rational rhs) {
+Rational operator+(const int& a, const Rational& rhs) {
     Rational b(a);
     Rational c = rhs;
     c += b;
     return c;
 }
 
-Rational operator-(Rational rhs, const int a) {
+Rational operator-(const Rational& rhs, const int& a) {
     Rational b(a);
     Rational c = rhs;
     c -= b;
     return c;
 }
 
-Rational operator-(const int a, Rational rhs) {
+Rational operator-(const int& a, const Rational& rhs) {
     Rational b(a);
     Rational c = rhs;
-    c -= b;
-    return c;
+    b -= c;
+    return b;
 }
 
-Rational operator*(const int a, Rational rhs) {
+Rational operator*(const int& a, const Rational& rhs) {
     Rational b(a);
     Rational c = rhs;
     c *= b;
     return c;
 }
 
-Rational operator*(Rational rhs, const int a) {
+Rational operator*(const Rational& rhs, const int& a) {
     Rational b(a);
     Rational c = rhs;
     c *= b;
     return c;
+}
+
+Rational operator/(const Rational& lhs, const int32_t& rhs)
+{
+    Rational div(lhs);
+    div /= rhs;
+    return div;
+}
+
+Rational operator/(const int32_t& lhs, const Rational& rhs)
+{
+    Rational div(lhs, 1);
+    div /= rhs;
+    return div;
 }
 
 
@@ -263,25 +277,28 @@ std::ostream& Rational::writeTo(std::ostream& ostrm) const noexcept {
 }
 
 std::istream& Rational::readFrom(std::istream& istrm) {
-    char separator_(0);
-    int32_t num_(0);
-    int32_t denum_(0);
-    char eof(0);
-    istrm >> num_ >> std::noskipws >> separator_ >> std::skipws >> std::noskipws >> denum_;
-    if(denum_ < 0){
+    char comma{ 0 };
+    int32_t numerator{ 0 };
+    int32_t denumerator{ 0 };
+    istrm >> numerator;
+    if (isspace(istrm.peek())) {
         istrm.setstate(std::ios_base::failbit);
-    
+        istrm.setstate(std::ios_base::eofbit);
     }
-    if (istrm.good() || istrm.eof() && !istrm.fail()) {
-        if (int(separator_) == 47) {
-            //istrm.clear();
-            *this = Rational(num_, denum_);
-
-        }
-        else {
-            istrm.setstate(std::ios_base::failbit);
-        }
-
-        return istrm;
+    istrm >> comma;
+    if (int(comma) != 47 || isspace(istrm.peek())) {
+        istrm.setstate(std::ios_base::failbit);
+        istrm.setstate(std::ios_base::eofbit);
     }
+    istrm >> denumerator;
+    if (denumerator <= 0) {
+        istrm.setstate(std::ios_base::failbit);
+        istrm.setstate(std::ios_base::eofbit);
+    }
+    if (istrm.fail() == false) {
+        num = numerator;
+        denom = denumerator;
+        reducing();
+    }
+    return istrm;
 }
