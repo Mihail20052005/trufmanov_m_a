@@ -4,7 +4,7 @@ class ArrayD {
 public:
     ArrayD() = default;
     ArrayD(const std::ptrdiff_t size);
-    ArrayD(const ArrayD&) = default;
+    ArrayD(const ArrayD&  lhs);
     ~ArrayD();
 
     ArrayD& operator=(const ArrayD& rhs);
@@ -17,9 +17,9 @@ public:
     void remove(std::ptrdiff_t i);
 
 private:
-    std::ptrdiff_t caparcity{};
+    std::ptrdiff_t caparcity{ 0 };
     ptrdiff_t ssize_{ 0 };
     double* data_ = nullptr;
 };
 
-bool notError(std::ptrdiff_t a, std::ptrdiff_t b);
+//bool notError(std::ptrdiff_t a, std::ptrdiff_t b);
