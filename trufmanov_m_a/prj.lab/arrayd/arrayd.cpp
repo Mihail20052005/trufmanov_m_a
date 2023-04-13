@@ -58,7 +58,7 @@ void ArrayD::insert(const std::ptrdiff_t index, const double value){
 }
 
 void ArrayD::resize(const std::ptrdiff_t new_size){
-    if(new_size <= 0){
+    if(new_size < 0){
         throw std::invalid_argument("index out of range");
     }
     if(new_size <= ssize_){
@@ -68,8 +68,10 @@ void ArrayD::resize(const std::ptrdiff_t new_size){
 
     if(new_size > ssize_){
         double* new_data = new double[new_size]();
-        for(size_t i = 0; i < ssize_; ++i){
-            new_data[i] = data_[i];
+        if (data_ != nullptr) {
+            auto copy_size = std::min(ssize_, new_size) * sizeof(double);
+            std::memcpy(new_data, data_, copy_size);
+            delete[] data_;
         }
 
         delete[] data_;
