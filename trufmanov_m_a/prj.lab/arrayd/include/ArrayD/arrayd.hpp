@@ -17,8 +17,8 @@ public:
     void remove(std::ptrdiff_t i);
 
 private:
-    std::ptrdiff_t caparcity{ 0 };
-    ptrdiff_t ssize_{ 0 };
+    std::ptrdiff_t capacity_{ 0 };
+    ptrdiff_t size_{ 0 };
     double* data_ = nullptr;
 };
 

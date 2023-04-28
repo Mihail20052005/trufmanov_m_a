@@ -1,30 +1,43 @@
 #include <arrayd/arrayd.hpp>
-
 #include <stdexcept>
-#include <cstring>
 
-
-ArrayD::ArrayD(const std::ptrdiff_t size)
-    : ssize_(size)
-{
+ArrayD::ArrayD(const std::ptrdiff_t size) {
     if (size < 0) {
-        throw std::invalid_argument("size must be more 0");
+        throw std::invalid_argument("Size of the new array must be greater than 0");
     }
-    else {
-        ArrayD::resize(size);
+    if (size > 0) {
+        resize(size);
     }
 }
 
-ArrayD::ArrayD(const ArrayD& lhs) {
-    ssize_ = lhs.ssize_;
-    caparcity = lhs.caparcity;
+ArrayD& ArrayD::operator=(const ArrayD& other) {
+    if (this != &other) {
+        delete[] data_;
+        data_ = nullptr;
+        size_ = 0;
+        capacity_ = 0;
 
-    if (caparcity > 0) {
-        data_ = new double[caparcity];
-        for (std::ptrdiff_t i = 0; i < ssize_; ++i) {
-            data_[i] = lhs.data_[i];
+        if (other.capacity_ > 0) {
+            data_ = new double[other.capacity_];
+            capacity_ = other.capacity_;
+            for (std::ptrdiff_t i = 0; i < other.size_; ++i) {
+                data_[i] = other.data_[i];
+            }
         }
+        size_ = other.size_;
+    }
+    return *this;
+}
 
+ArrayD::ArrayD(const ArrayD& other) {
+    size_ = other.size_;
+    capacity_ = other.capacity_;
+
+    if (capacity_ > 0) {
+        data_ = new double[capacity_];
+        for (std::ptrdiff_t i = 0; i < size_; ++i) {
+            data_[i] = other.data_[i];
+        }
     }
     else {
         data_ = nullptr;
@@ -32,118 +45,79 @@ ArrayD::ArrayD(const ArrayD& lhs) {
 }
 
 ArrayD::~ArrayD() {
-    delete data_;
+    delete[] data_;
 }
 
-
-void ArrayD::insert(const std::ptrdiff_t index, const double value) {
-    if (index < 0 || index >= ssize_) {
-        throw std::invalid_argument("index out of range");
+[[nodiscard]] double& ArrayD::operator[](const std::ptrdiff_t i) {
+    if (i < 0 || i >= size_) {
+        throw std::out_of_range("Index out of range");
     }
+    return data_[i];
+}
 
-    if (ssize_ == caparcity) {
-        resize(ssize_ + 1);
-    }
+[[nodiscard]] const double& ArrayD::operator[](const std::ptrdiff_t i) const {
+    if (i < 0 || i >= size_)
+        throw std::out_of_range("Index out of range");
+    return data_[i];
+}
 
-    if (ssize_ == 0) {
-        data_[0] = value;
-    }
-    else {
-
-        for (std::ptrdiff_t i = ssize_; i > index; i--) {
-            data_[i] = data_[i - 1];
-        }
-
-        data_[index] = value;
-    }
-    ssize_ += 1;
+[[nodiscard]] std::ptrdiff_t ArrayD::ssize() const noexcept {
+    return size_;
 }
 
 void ArrayD::resize(const std::ptrdiff_t new_size) {
-    if (new_size < 0) {
-        throw std::invalid_argument("index out of range");
+    if (new_size <= 0) {
+        throw std::invalid_argument("New size must be greater than 0");
     }
-    if (new_size <= ssize_) {
-        ssize_ = new_size;
+    if (new_size <= size_) {
+        size_ = new_size; // Ќе мен€ем capacity потому, что это место нам может просто пригодитьс€ еще в будущем
         return;
     }
-
-    if (new_size > ssize_) {
-        double* new_data = new double[new_size]();
-        if (data_ != nullptr) {
-            auto copy_size = std::min(ssize_, new_size) * sizeof(double);
-            std::memcpy(new_data, data_, copy_size);
-            delete[] data_;
+    if (new_size > capacity_) {
+        double* new_data = new double[new_size] {};
+        for (size_t i = 0; i < size_; ++i) {
+            new_data[i] = data_[i];
         }
-
         delete[] data_;
         data_ = new_data;
-        //delete[] new_data;
-        ssize_ = new_size;
-        caparcity = new_size * 2;
+        size_ = new_size;
+        capacity_ = new_size * 2;
         return;
-
     }
-
-    if (new_size <= caparcity) {
-        ssize_ = new_size;
-
+    if (new_size <= capacity_) {
+        size_ = new_size;
     }
-
-
-
 }
 
-void ArrayD::remove(const std::ptrdiff_t i) {
-    if (ssize_ == 0) {
-        return;
-    }
-    if (i < 0 || i >= ssize_) {
+void ArrayD::insert(const std::ptrdiff_t i, const double value) {
+    if (i < 0 || i > size_) {
         throw std::invalid_argument("Index out of range");
     }
-    for (ptrdiff_t j = i; j < ssize_ - 1; ++j) {
+    if (size_ == capacity_) {
+        resize(size_ + 1);
+    }
+    if (size_ == 0) {
+        data_[0] = value;
+    }
+    else {
+        for (ptrdiff_t j = size_ - 1; j >= i; --j) {
+            data_[j + 1] = data_[j];
+        }
+        data_[i] = value;
+    }
+    size_++;
+}
+
+// ƒопускаю, что неправильно
+void ArrayD::remove(const std::ptrdiff_t i) {
+    if (size_ == 0) {
+        return;
+    }
+    if (i < 0 || i >= size_) {
+        throw std::invalid_argument("Index out of range");
+    }
+    for (ptrdiff_t j = i; j < size_ - 1; ++j) {
         data_[j] = data_[j + 1];
     }
-    ssize_--;
+    size_--;
 }
-
-
-double& ArrayD::operator[](const std::ptrdiff_t indx) {
-    if (indx < 0 || indx >= ssize_) {
-        throw std::invalid_argument("index must be in size range");
-    }
-    return data_[indx];
-}
-
-const double& ArrayD::operator[](const std::ptrdiff_t indx) const {
-    if (indx < 0 || indx >= ssize_) {
-        throw std::invalid_argument("index must be in size range");
-    }
-    return data_[indx];
-}
-
-ArrayD& ArrayD::operator=(const ArrayD& other) {
-    if (this != &other) {
-        delete[] data_;
-        data_ = nullptr;
-        ssize_ = 0;
-        caparcity = 0;
-
-        if (other.caparcity > 0) {
-            data_ = new double[other.caparcity];
-            caparcity = other.caparcity;
-            for (std::ptrdiff_t i = 0; i < other.ssize_; ++i) {
-                data_[i] = other.data_[i];
-            }
-        }
-        ssize_ = other.ssize_;
-    }
-    return *this;
-}
-
-
-std::ptrdiff_t ArrayD::ssize() const noexcept {
-    return ssize_;
-}
-
-
