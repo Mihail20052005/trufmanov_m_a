@@ -5,16 +5,17 @@
 
 TEST_CASE("Test number 1") {
 	ArrayD arr;
-	//CHECK_THROWS(arr[0]);
+	CHECK_THROWS(arr[0]);
 	CHECK(arr.ssize() == 0);
 	arr.resize(5);
 	for (int i = 0; i < arr.ssize(); i++) {
 		CHECK(arr[i] == 0.0);
 	}
-	//CHECK_THROWS(arr[7]);
+	CHECK_THROWS(arr[7]);
 	arr[1] = 56.24;
 	CHECK(arr[1] == 56.24);
 	ArrayD arr1(arr);
+	CHECK(arr1.ssize() == arr.ssize());
 	for (int i = 0; i < arr1.ssize(); i++) {
 		CHECK(arr1[i] == arr[i]);
 	}
