@@ -1,0 +1,60 @@
+\doxysection{Perona\+Malic.\+hpp}
+\hypertarget{_perona_malic_8hpp_source}{}\label{_perona_malic_8hpp_source}\index{C:/Misha/Projects/course/course\_work\_2/perona-\/malic/include/PeronaMalic/PeronaMalic.hpp@{C:/Misha/Projects/course/course\_work\_2/perona-\/malic/include/PeronaMalic/PeronaMalic.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <opencv2/core/utils/logger.hpp>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_perona_malic}{PeronaMalic}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_perona_malic_a2640e1a6bffac5860a56a011b80e7316}{PeronaMalic}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_perona_malic_ae45ed44504c5e115b8360d61ce10e03f}{PeronaMalic}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_perona_malic}{PeronaMalic}}\&\ rhs);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_perona_malic_af5810af0a26791c7cecfdf71fbd379a0}{PeronaMalic}}(cv::Mat\ image,\ \textcolor{keywordtype}{double}\ lambda,\ \textcolor{keywordtype}{double}\ k,\ \textcolor{keywordtype}{int}\ iter);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_perona_malic_a9a62513f113eb5c834f5076f2744024d}{\string~PeronaMalic}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ cv::Mat\ \mbox{\hyperlink{class_perona_malic_a6ac9dd58ed43e9000a638ea4055277aa}{filterPeronaMalic}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perona_malic_ab9ae058652a8ad2cc5fc07407099954d}{demonstrationPM}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perona_malic_a00f2f29319ce96c8805b5c1bb2774332}{postFiler}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perona_malic_a30bc6f55f77b6f577e14035482d1bb71}{writeImage}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perona_malic_a882091b836dcf3adebf26900702a36aa}{saveImage}}(std::string\ output\_path,\ std::string\ file\_name);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ cv::Mat\ image\_;\ \textcolor{comment}{/*image\_\ -\/\ входное\ изображение\ */}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{double}\ lambda\_\ =\ 1.0\ /\ 7.0;\ \textcolor{comment}{/*image\_\ -\/\ входное\ изображение\ */}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{double}\ k\_\ =\ 30;\ \textcolor{comment}{/*image\_\ -\/\ входное\ изображение\ */}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ iter\_\ =\ 15;\ \textcolor{comment}{/*image\_\ -\/\ входное\ изображение\ */}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{float}\ ahN[3][3]\ =\ \{\ \{0,\ 1,\ 0\},\ \{0,\ -\/1,\ 0\},\ \{0,\ 0,\ 0\}\ \};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{float}\ ahS[3][3]\ =\ \{\ \{0,\ 0,\ 0\},\ \{0,\ -\/1,\ 0\},\ \{0,\ 1,\ 0\}\ \};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{float}\ ahE[3][3]\ =\ \{\ \{0,\ 0,\ 0\},\ \{0,\ -\/1,\ 1\},\ \{0,\ 0,\ 0\}\ \};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{float}\ ahW[3][3]\ =\ \{\ \{0,\ 0,\ 0\},\ \{1,\ -\/1,\ 0\},\ \{0,\ 0,\ 0\}\ \};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{float}\ ahNE[3][3]\ =\ \{\ \{0,\ 0,\ 1\},\ \{0,\ -\/1,\ 0\},\ \{0,\ 0,\ 0\}\ \};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{float}\ ahSE[3][3]\ =\ \{\ \{0,\ 0,\ 0\},\ \{0,\ -\/1,\ 0\},\ \{0,\ 0,\ 1\}\ \};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{float}\ ahSW[3][3]\ =\ \{\ \{0,\ 0,\ 0\},\ \{0,\ -\/1,\ 0\},\ \{1,\ 0,\ 0\}\ \};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{float}\ ahNW[3][3]\ =\ \{\ \{1,\ 0,\ 0\},\ \{0,\ -\/1,\ 0\},\ \{0,\ 0,\ 0\}\ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ cv::Mat\ hN\ =\ cv::Mat(3,\ 3,\ CV\_32FC1,\ \&ahN);}
+\DoxyCodeLine{00086\ \ \ \ \ cv::Mat\ hS\ =\ cv::Mat(3,\ 3,\ CV\_32FC1,\ \&ahS);}
+\DoxyCodeLine{00087\ \ \ \ \ cv::Mat\ hE\ =\ cv::Mat(3,\ 3,\ CV\_32FC1,\ \&ahE);}
+\DoxyCodeLine{00088\ \ \ \ \ cv::Mat\ hW\ =\ cv::Mat(3,\ 3,\ CV\_32FC1,\ \&ahW);}
+\DoxyCodeLine{00089\ \ \ \ \ cv::Mat\ hNE\ =\ cv::Mat(3,\ 3,\ CV\_32FC1,\ \&ahNE);}
+\DoxyCodeLine{00090\ \ \ \ \ cv::Mat\ hSE\ =\ cv::Mat(3,\ 3,\ CV\_32FC1,\ \&ahSE);}
+\DoxyCodeLine{00091\ \ \ \ \ cv::Mat\ hSW\ =\ cv::Mat(3,\ 3,\ CV\_32FC1,\ \&ahSW);}
+\DoxyCodeLine{00092\ \ \ \ \ cv::Mat\ hNW\ =\ cv::Mat(3,\ 3,\ CV\_32FC1,\ \&ahNW);}
+\DoxyCodeLine{00093\ \};}
+
+\end{DoxyCode}

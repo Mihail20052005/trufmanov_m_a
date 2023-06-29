@@ -1,0 +1,24 @@
+var NAVTREEINDEX0 =
+{
+"_perona_malic_8hpp_source.html":[1,0,0,0,0,0],
+"annotated.html":[0,0],
+"class_perona_malic.html":[0,0,0],
+"class_perona_malic.html#a00f2f29319ce96c8805b5c1bb2774332":[0,0,0,6],
+"class_perona_malic.html#a2640e1a6bffac5860a56a011b80e7316":[0,0,0,0],
+"class_perona_malic.html#a30bc6f55f77b6f577e14035482d1bb71":[0,0,0,8],
+"class_perona_malic.html#a6ac9dd58ed43e9000a638ea4055277aa":[0,0,0,5],
+"class_perona_malic.html#a882091b836dcf3adebf26900702a36aa":[0,0,0,7],
+"class_perona_malic.html#a9a62513f113eb5c834f5076f2744024d":[0,0,0,3],
+"class_perona_malic.html#ab9ae058652a8ad2cc5fc07407099954d":[0,0,0,4],
+"class_perona_malic.html#ae45ed44504c5e115b8360d61ce10e03f":[0,0,0,1],
+"class_perona_malic.html#af5810af0a26791c7cecfdf71fbd379a0":[0,0,0,2],
+"classes.html":[0,1],
+"dir_2b2bb226e01293b24fca1e768996da00.html":[1,0,0],
+"dir_76e42e3b45b9745bd96432ced4224207.html":[1,0,0,0],
+"dir_9bb69fe6b1bb4db9f44419ad705b784c.html":[1,0,0,0,0],
+"files.html":[1,0],
+"functions.html":[0,2,0],
+"functions_func.html":[0,2,1],
+"index.html":[],
+"pages.html":[]
+};

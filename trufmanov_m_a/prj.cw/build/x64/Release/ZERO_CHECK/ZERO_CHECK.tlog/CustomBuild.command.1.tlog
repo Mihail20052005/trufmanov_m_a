@@ -1,0 +1,10 @@
+^C:\MISHA\PROJECTS\COURSE\COURSE_WORK_2\BUILD\CMAKEFILES\31C34361C134E6BF1A988E5E31EF5586\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Misha/Projects/course/course_work_2 -BC:/Misha/Projects/course/course_work_2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Misha/Projects/course/course_work_2/build/course_work_2.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

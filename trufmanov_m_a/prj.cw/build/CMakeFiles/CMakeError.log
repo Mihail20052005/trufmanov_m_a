@@ -1,0 +1,57 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: C:/Misha/Projects/course/course_work_2/build/CMakeFiles/CMakeScratch/TryCompile-kn52jt
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_8f67f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.0+18d5aef85 for .NET Framework
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31933 для x64
+  src.c
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8f67f.dir\Debug\\" /Fd"cmTC_8f67f.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Misha\Projects\course\course_work_2\build\CMakeFiles\CMakeScratch\TryCompile-kn52jt\src.c"
+C:\Misha\Projects\course\course_work_2\build\CMakeFiles\CMakeScratch\TryCompile-kn52jt\src.c(1,10): fatal  error C1083: Не удается открыть файл включение: pthread.h: No such file or directory, [C:\Misha\Projects\course\course_work_2\build\CMakeFiles\CMakeScratch\TryCompile-kn52jt\cmTC_8f67f.vcxproj]
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: C:/Misha/Projects/course/course_work_2/build/CMakeFiles/CMakeScratch/TryCompile-2mcuzt
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_dedbe.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.0+18d5aef85 for .NET Framework
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31933 для x64
+  CheckFunctionExists.c
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dedbe.dir\Debug\\" /Fd"cmTC_dedbe.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Misha\Projects\course\course_work_2\build\CMakeFiles\CMakeScratch\TryCompile-2mcuzt\CheckFunctionExists.c"
+LINK : fatal error LNK1104: не удается открыть файл "pthreads.lib" [C:\Misha\Projects\course\course_work_2\build\CMakeFiles\CMakeScratch\TryCompile-2mcuzt\cmTC_dedbe.vcxproj]
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: C:/Misha/Projects/course/course_work_2/build/CMakeFiles/CMakeScratch/TryCompile-fi8wem
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_3ed06.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.0+18d5aef85 for .NET Framework
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31933 для x64
+  CheckFunctionExists.c
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3ed06.dir\Debug\\" /Fd"cmTC_3ed06.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Misha\Projects\course\course_work_2\build\CMakeFiles\CMakeScratch\TryCompile-fi8wem\CheckFunctionExists.c"
+LINK : fatal error LNK1104: не удается открыть файл "pthread.lib" [C:\Misha\Projects\course\course_work_2\build\CMakeFiles\CMakeScratch\TryCompile-fi8wem\cmTC_3ed06.vcxproj]
+
+
+

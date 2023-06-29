@@ -1,0 +1,101 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "perona-malic",
+					"jsonFile" : "directory-perona-malic-Release-9b4be39792e39c586c03.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "perona-malic",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "testdir",
+					"jsonFile" : "directory-testdir-Release-fdd2526f50f4a9b0fcbe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "testdir",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "course_work_2",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "PeronaMalic::@9bee22d32d8711999313",
+					"jsonFile" : "target-PeronaMalic-Release-ad05895aeeb0b89ec364.json",
+					"name" : "PeronaMalic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "testdir::@f5c07645972e193c055e",
+					"jsonFile" : "target-testdir-Release-5bcad057c7a2f520ab2a.json",
+					"name" : "testdir",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Misha/Projects/course/course_work_2/out/build/x64-release",
+		"source" : "C:/Misha/Projects/course/course_work_2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

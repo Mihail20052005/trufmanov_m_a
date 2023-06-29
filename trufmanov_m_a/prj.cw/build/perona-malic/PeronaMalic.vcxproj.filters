@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Misha\Projects\course\course_work_2\perona-malic\PeronaMalic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Misha\Projects\course\course_work_2\perona-malic\include\PeronaMalic\PeronaMalic.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Misha\Projects\course\course_work_2\perona-malic\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{C510CC7F-422B-39E4-A37B-E7D307C933FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5C55E2D2-8C11-3EB5-9FF2-B69AAA58188B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

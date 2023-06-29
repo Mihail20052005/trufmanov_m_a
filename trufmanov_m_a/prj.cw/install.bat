@@ -1,0 +1,1 @@
+cmake --install ./build --config release --prefix install

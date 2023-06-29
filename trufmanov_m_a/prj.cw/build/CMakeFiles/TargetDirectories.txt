@@ -1,0 +1,4 @@
+C:/Misha/Projects/course/course_work_2/build/CMakeFiles/ALL_BUILD.dir
+C:/Misha/Projects/course/course_work_2/build/CMakeFiles/ZERO_CHECK.dir
+C:/Misha/Projects/course/course_work_2/build/perona-malic/CMakeFiles/PeronaMalic.dir
+C:/Misha/Projects/course/course_work_2/build/testdir/CMakeFiles/testdir.dir

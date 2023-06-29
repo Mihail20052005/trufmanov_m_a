@@ -1,0 +1,8 @@
+C:/Misha/Projects/course/course_work_2/out/build/x64-release/CMakeFiles/edit_cache.dir
+C:/Misha/Projects/course/course_work_2/out/build/x64-release/CMakeFiles/rebuild_cache.dir
+C:/Misha/Projects/course/course_work_2/out/build/x64-release/perona-malic/CMakeFiles/PeronaMalic.dir
+C:/Misha/Projects/course/course_work_2/out/build/x64-release/perona-malic/CMakeFiles/edit_cache.dir
+C:/Misha/Projects/course/course_work_2/out/build/x64-release/perona-malic/CMakeFiles/rebuild_cache.dir
+C:/Misha/Projects/course/course_work_2/out/build/x64-release/testdir/CMakeFiles/testdir.dir
+C:/Misha/Projects/course/course_work_2/out/build/x64-release/testdir/CMakeFiles/edit_cache.dir
+C:/Misha/Projects/course/course_work_2/out/build/x64-release/testdir/CMakeFiles/rebuild_cache.dir

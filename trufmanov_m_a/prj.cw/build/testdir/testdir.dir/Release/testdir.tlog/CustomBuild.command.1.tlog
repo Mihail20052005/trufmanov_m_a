@@ -1,0 +1,10 @@
+^C:\MISHA\PROJECTS\COURSE\COURSE_WORK_2\TESTDIR\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Misha/Projects/course/course_work_2 -BC:/Misha/Projects/course/course_work_2/build --check-stamp-file C:/Misha/Projects/course/course_work_2/build/testdir/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

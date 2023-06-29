@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PeronaMalic Project: Исходный файл C:/Misha/Projects/course/course_work_2/perona-malic/include/PeronaMalic/PeronaMalic.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PeronaMalic Project
+   </div>
+   <div id="projectbrief">Project implements Perona-Malic algorithm</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_perona_malic_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PeronaMalic.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;opencv2/core/utils/logger.hpp&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_perona_malic.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_perona_malic.html">PeronaMalic</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_perona_malic.html#a2640e1a6bffac5860a56a011b80e7316">   18</a></span>    <a class="code hl_function" href="class_perona_malic.html#a2640e1a6bffac5860a56a011b80e7316">PeronaMalic</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_perona_malic.html#ae45ed44504c5e115b8360d61ce10e03f">   24</a></span>    <a class="code hl_function" href="class_perona_malic.html#ae45ed44504c5e115b8360d61ce10e03f">PeronaMalic</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_perona_malic.html">PeronaMalic</a>&amp; rhs);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_perona_malic.html#af5810af0a26791c7cecfdf71fbd379a0">   33</a></span>    <a class="code hl_function" href="class_perona_malic.html#af5810af0a26791c7cecfdf71fbd379a0">PeronaMalic</a>(cv::Mat image, <span class="keywordtype">double</span> lambda, <span class="keywordtype">double</span> k, <span class="keywordtype">int</span> iter);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_perona_malic.html#a9a62513f113eb5c834f5076f2744024d">   38</a></span>    <a class="code hl_function" href="class_perona_malic.html#a9a62513f113eb5c834f5076f2744024d">~PeronaMalic</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_perona_malic.html#a6ac9dd58ed43e9000a638ea4055277aa">   44</a></span>    cv::Mat <a class="code hl_function" href="class_perona_malic.html#a6ac9dd58ed43e9000a638ea4055277aa">filterPeronaMalic</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_perona_malic.html#ab9ae058652a8ad2cc5fc07407099954d">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_perona_malic.html#ab9ae058652a8ad2cc5fc07407099954d">demonstrationPM</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_perona_malic.html#a00f2f29319ce96c8805b5c1bb2774332">   55</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_perona_malic.html#a00f2f29319ce96c8805b5c1bb2774332">postFiler</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_perona_malic.html#a30bc6f55f77b6f577e14035482d1bb71">   61</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_perona_malic.html#a30bc6f55f77b6f577e14035482d1bb71">writeImage</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_perona_malic.html#a882091b836dcf3adebf26900702a36aa">   68</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_perona_malic.html#a882091b836dcf3adebf26900702a36aa">saveImage</a>(std::string output_path, std::string file_name);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    cv::Mat image_; <span class="comment">/*image_ - входное изображение */</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">double</span> lambda_ = 1.0 / 7.0; <span class="comment">/*image_ - входное изображение */</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">double</span> k_ = 30; <span class="comment">/*image_ - входное изображение */</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">int</span> iter_ = 15; <span class="comment">/*image_ - входное изображение */</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">float</span> ahN[3][3] = { {0, 1, 0}, {0, -1, 0}, {0, 0, 0} };</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">float</span> ahS[3][3] = { {0, 0, 0}, {0, -1, 0}, {0, 1, 0} };</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">float</span> ahE[3][3] = { {0, 0, 0}, {0, -1, 1}, {0, 0, 0} };</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">float</span> ahW[3][3] = { {0, 0, 0}, {1, -1, 0}, {0, 0, 0} };</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">float</span> ahNE[3][3] = { {0, 0, 1}, {0, -1, 0}, {0, 0, 0} };</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">float</span> ahSE[3][3] = { {0, 0, 0}, {0, -1, 0}, {0, 0, 1} };</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">float</span> ahSW[3][3] = { {0, 0, 0}, {0, -1, 0}, {1, 0, 0} };</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">float</span> ahNW[3][3] = { {1, 0, 0}, {0, -1, 0}, {0, 0, 0} };</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    cv::Mat hN = cv::Mat(3, 3, CV_32FC1, &amp;ahN);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    cv::Mat hS = cv::Mat(3, 3, CV_32FC1, &amp;ahS);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    cv::Mat hE = cv::Mat(3, 3, CV_32FC1, &amp;ahE);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    cv::Mat hW = cv::Mat(3, 3, CV_32FC1, &amp;ahW);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    cv::Mat hNE = cv::Mat(3, 3, CV_32FC1, &amp;ahNE);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    cv::Mat hSE = cv::Mat(3, 3, CV_32FC1, &amp;ahSE);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    cv::Mat hSW = cv::Mat(3, 3, CV_32FC1, &amp;ahSW);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    cv::Mat hNW = cv::Mat(3, 3, CV_32FC1, &amp;ahNW);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
+<div class="ttc" id="aclass_perona_malic_html"><div class="ttname"><a href="class_perona_malic.html">PeronaMalic</a></div><div class="ttdoc">Класс для работы с алгоритмом Перона-Малика</div><div class="ttdef"><b>Definition</b> PeronaMalic.hpp:12</div></div>
+<div class="ttc" id="aclass_perona_malic_html_a00f2f29319ce96c8805b5c1bb2774332"><div class="ttname"><a href="class_perona_malic.html#a00f2f29319ce96c8805b5c1bb2774332">PeronaMalic::postFiler</a></div><div class="ttdeci">void postFiler()</div><div class="ttdoc">Метод, реализующий дополнительные работы с изображением. Вызывается после основного метода (filterPer...</div></div>
+<div class="ttc" id="aclass_perona_malic_html_a2640e1a6bffac5860a56a011b80e7316"><div class="ttname"><a href="class_perona_malic.html#a2640e1a6bffac5860a56a011b80e7316">PeronaMalic::PeronaMalic</a></div><div class="ttdeci">PeronaMalic()=default</div><div class="ttdoc">Конструктор по умолчанию для класса PeronaMalic.</div></div>
+<div class="ttc" id="aclass_perona_malic_html_a30bc6f55f77b6f577e14035482d1bb71"><div class="ttname"><a href="class_perona_malic.html#a30bc6f55f77b6f577e14035482d1bb71">PeronaMalic::writeImage</a></div><div class="ttdeci">void writeImage()</div><div class="ttdoc">Метод, выводящий изображение на экран</div></div>
+<div class="ttc" id="aclass_perona_malic_html_a6ac9dd58ed43e9000a638ea4055277aa"><div class="ttname"><a href="class_perona_malic.html#a6ac9dd58ed43e9000a638ea4055277aa">PeronaMalic::filterPeronaMalic</a></div><div class="ttdeci">cv::Mat filterPeronaMalic()</div><div class="ttdoc">Метод, реализующий алгоритм Перона-Малика</div></div>
+<div class="ttc" id="aclass_perona_malic_html_a882091b836dcf3adebf26900702a36aa"><div class="ttname"><a href="class_perona_malic.html#a882091b836dcf3adebf26900702a36aa">PeronaMalic::saveImage</a></div><div class="ttdeci">void saveImage(std::string output_path, std::string file_name)</div><div class="ttdoc">Метод, сохраняющий изображение в файл</div></div>
+<div class="ttc" id="aclass_perona_malic_html_a9a62513f113eb5c834f5076f2744024d"><div class="ttname"><a href="class_perona_malic.html#a9a62513f113eb5c834f5076f2744024d">PeronaMalic::~PeronaMalic</a></div><div class="ttdeci">~PeronaMalic()=default</div><div class="ttdoc">Деструктор для класса PeronaMalic.</div></div>
+<div class="ttc" id="aclass_perona_malic_html_ab9ae058652a8ad2cc5fc07407099954d"><div class="ttname"><a href="class_perona_malic.html#ab9ae058652a8ad2cc5fc07407099954d">PeronaMalic::demonstrationPM</a></div><div class="ttdeci">void demonstrationPM()</div><div class="ttdoc">Метод, реализующий демонстрацию алгоритма. В режиме демонстрации выводятся два окна с исходным и обра...</div></div>
+<div class="ttc" id="aclass_perona_malic_html_ae45ed44504c5e115b8360d61ce10e03f"><div class="ttname"><a href="class_perona_malic.html#ae45ed44504c5e115b8360d61ce10e03f">PeronaMalic::PeronaMalic</a></div><div class="ttdeci">PeronaMalic(const PeronaMalic &amp;rhs)</div><div class="ttdoc">Конструктор копирующий для класса PeronaMalic.</div></div>
+<div class="ttc" id="aclass_perona_malic_html_af5810af0a26791c7cecfdf71fbd379a0"><div class="ttname"><a href="class_perona_malic.html#af5810af0a26791c7cecfdf71fbd379a0">PeronaMalic::PeronaMalic</a></div><div class="ttdeci">PeronaMalic(cv::Mat image, double lambda, double k, int iter)</div><div class="ttdoc">Конструктор класса PeronaMalic.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_2b2bb226e01293b24fca1e768996da00.html">perona-malic</a></li><li class="navelem"><a class="el" href="dir_76e42e3b45b9745bd96432ced4224207.html">include</a></li><li class="navelem"><a class="el" href="dir_9bb69fe6b1bb4db9f44419ad705b784c.html">PeronaMalic</a></li><li class="navelem"><b>PeronaMalic.hpp</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+  </ul>
+</div>
+</body>
+</html>

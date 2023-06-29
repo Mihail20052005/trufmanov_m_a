@@ -1,0 +1,8 @@
+# ninja log v5
+7	701	7073982248450200	CMakeFiles/course_work_2.dir/course_work_2.cpp.obj	75b4f665358a1ecd
+1010	3311	7094827418559397	course_work_2.exe	b79be14b740509cf
+4	2623	7097410575818644	perona-malic/CMakeFiles/PeronaMalic.dir/PeronaMalic.cpp.obj	542757f27a7a421e
+13	5418	7097642632508373	testdir/CMakeFiles/testdir.dir/pmtest.cpp.obj	92390711d77acf50
+3	1009	7094827416418852	CMakeFiles/course_work_2.dir/prj/PeronaMalic.cpp.obj	bc3ab40c5ca3e989
+2624	2683	7097410576458529	perona-malic/PeronaMalic.lib	a82251b79cfdab1d
+5420	7030	7097642634804240	bin/testdir.exe	81a143c8f130a493

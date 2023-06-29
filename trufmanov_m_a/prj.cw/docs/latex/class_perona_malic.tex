@@ -1,0 +1,117 @@
+\doxysection{Класс Perona\+Malic}
+\hypertarget{class_perona_malic}{}\label{class_perona_malic}\index{PeronaMalic@{PeronaMalic}}
+
+
+Класс для работы с алгоритмом Перона-\/Малика  
+
+
+
+
+{\ttfamily \#include $<$Perona\+Malic.\+hpp$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_perona_malic_a2640e1a6bffac5860a56a011b80e7316}\label{class_perona_malic_a2640e1a6bffac5860a56a011b80e7316} 
+{\bfseries Perona\+Malic} ()=default
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию для класса \doxylink{class_perona_malic}{Perona\+Malic}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_perona_malic_ae45ed44504c5e115b8360d61ce10e03f}{Perona\+Malic}} (const \mbox{\hyperlink{class_perona_malic}{Perona\+Malic}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Конструктор копирующий для класса \doxylink{class_perona_malic}{Perona\+Malic}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_perona_malic_af5810af0a26791c7cecfdf71fbd379a0}{Perona\+Malic}} (cv\+::\+Mat image, double lambda, double k, int iter)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_perona_malic}{Perona\+Malic}. \end{DoxyCompactList}\item 
+\Hypertarget{class_perona_malic_a9a62513f113eb5c834f5076f2744024d}\label{class_perona_malic_a9a62513f113eb5c834f5076f2744024d} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Perona\+Malic} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор для класса \doxylink{class_perona_malic}{Perona\+Malic}. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_perona_malic_a6ac9dd58ed43e9000a638ea4055277aa}{filter\+Perona\+Malic}} ()
+\begin{DoxyCompactList}\small\item\em Метод, реализующий алгоритм Перона-\/Малика \end{DoxyCompactList}\item 
+\Hypertarget{class_perona_malic_ab9ae058652a8ad2cc5fc07407099954d}\label{class_perona_malic_ab9ae058652a8ad2cc5fc07407099954d} 
+void {\bfseries demonstration\+PM} ()
+\begin{DoxyCompactList}\small\item\em Метод, реализующий демонстрацию алгоритма. В режиме демонстрации выводятся два окна с исходным и обработанными изображениями \end{DoxyCompactList}\item 
+\Hypertarget{class_perona_malic_a00f2f29319ce96c8805b5c1bb2774332}\label{class_perona_malic_a00f2f29319ce96c8805b5c1bb2774332} 
+void {\bfseries post\+Filer} ()
+\begin{DoxyCompactList}\small\item\em Метод, реализующий дополнительные работы с изображением. Вызывается после основного метода (filter\+Perona\+Malic) \end{DoxyCompactList}\item 
+\Hypertarget{class_perona_malic_a30bc6f55f77b6f577e14035482d1bb71}\label{class_perona_malic_a30bc6f55f77b6f577e14035482d1bb71} 
+void {\bfseries write\+Image} ()
+\begin{DoxyCompactList}\small\item\em Метод, выводящий изображение на экран \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perona_malic_a882091b836dcf3adebf26900702a36aa}{save\+Image}} (std\+::string output\+\_\+path, std\+::string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Метод, сохраняющий изображение в файл \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для работы с алгоритмом Перона-\/Малика 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_perona_malic_ae45ed44504c5e115b8360d61ce10e03f}\label{class_perona_malic_ae45ed44504c5e115b8360d61ce10e03f} 
+\index{PeronaMalic@{PeronaMalic}!PeronaMalic@{PeronaMalic}}
+\index{PeronaMalic@{PeronaMalic}!PeronaMalic@{PeronaMalic}}
+\doxysubsubsection{\texorpdfstring{PeronaMalic()}{PeronaMalic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Perona\+Malic\+::\+Perona\+Malic (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_perona_malic}{Perona\+Malic}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Конструктор копирующий для класса \doxylink{class_perona_malic}{Perona\+Malic}. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em cv\+::\+Mat\&} & rhs матрица, для которой будет применен алгоритм \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_perona_malic_af5810af0a26791c7cecfdf71fbd379a0}\label{class_perona_malic_af5810af0a26791c7cecfdf71fbd379a0} 
+\index{PeronaMalic@{PeronaMalic}!PeronaMalic@{PeronaMalic}}
+\index{PeronaMalic@{PeronaMalic}!PeronaMalic@{PeronaMalic}}
+\doxysubsubsection{\texorpdfstring{PeronaMalic()}{PeronaMalic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Perona\+Malic\+::\+Perona\+Malic (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{image,  }\item[{double}]{lambda,  }\item[{double}]{k,  }\item[{int}]{iter }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \doxylink{class_perona_malic}{Perona\+Malic}. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em cv\+::\+Mat} & image -\/ изображение, на котором будет применен алгоритм Перона-\/Малика \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & lambda \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & k \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & iter \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_perona_malic_a6ac9dd58ed43e9000a638ea4055277aa}\label{class_perona_malic_a6ac9dd58ed43e9000a638ea4055277aa} 
+\index{PeronaMalic@{PeronaMalic}!filterPeronaMalic@{filterPeronaMalic}}
+\index{filterPeronaMalic@{filterPeronaMalic}!PeronaMalic@{PeronaMalic}}
+\doxysubsubsection{\texorpdfstring{filterPeronaMalic()}{filterPeronaMalic()}}
+{\footnotesize\ttfamily cv\+::\+Mat Perona\+Malic\+::filter\+Perona\+Malic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Метод, реализующий алгоритм Перона-\/Малика 
+
+\begin{DoxyReturn}{Возвращает}
+cv\+::\+Mat object после анизатропной фильтрации 
+\end{DoxyReturn}
+\Hypertarget{class_perona_malic_a882091b836dcf3adebf26900702a36aa}\label{class_perona_malic_a882091b836dcf3adebf26900702a36aa} 
+\index{PeronaMalic@{PeronaMalic}!saveImage@{saveImage}}
+\index{saveImage@{saveImage}!PeronaMalic@{PeronaMalic}}
+\doxysubsubsection{\texorpdfstring{saveImage()}{saveImage()}}
+{\footnotesize\ttfamily void Perona\+Malic\+::save\+Image (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+\_\+path,  }\item[{std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Метод, сохраняющий изображение в файл 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em std\+::string} & output\+\_\+path -\/ путь к месту сохранения изображения \\
+\hline
+\mbox{\texttt{ in}}  & {\em std\+::string} & file\+\_\+name -\/ название сохраненного файла \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Misha/\+Projects/course/course\+\_\+work\+\_\+2/perona-\/malic/include/\+Perona\+Malic/Perona\+Malic.\+hpp\end{DoxyCompactItemize}
